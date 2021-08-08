@@ -5,6 +5,7 @@ import "../styles/main.scss";
 import Header from "./components/Header";
 import Loader from "./components/Loader";
 
+// Lazy loading the apps for code splitting.
 const HomeApp = lazy(() => import("./apps/HomeApp"));
 const DashboardApp = lazy(() => import("./apps/DashboardApp"));
 const ProfileApp = lazy(() => import("./apps/ProfileApp"));
