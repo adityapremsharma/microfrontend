@@ -1,0 +1,140 @@
+.navbar {
+  .menu-icon {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+    width: 100%;
+    padding: 0 5rem;
+    background-color: var(--color-primary);
+    transition: all 0.3s;
+    color: $white;
+    position: fixed;
+    overflow: hidden;
+    z-index: 99991;
+    .left {
+      flex: 1;
+      width: 125px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        width: 125px;
+      }
+    }
+
+    .middle {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+
+      a {
+        margin: 1rem;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          left: 0;
+          bottom: -1rem;
+          background-color: var(--color-secondary);
+          transition: all 0.3s;
+          transform: scaleX(0);
+          transition: all 0.3s;
+          backface-visibility: hidden;
+        }
+
+        &:hover::after {
+          transform: scaleX(100%);
+        }
+      }
+    }
+
+    .active {
+      &::after {
+        transform: scaleX(100%) !important;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+
+      a {
+        position: relative;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+
+          &:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            left: 0;
+            bottom: -1rem;
+            background-color: var(--color-secondary);
+            transition: all 0.3s;
+            transform: scaleX(0);
+            transition: all 0.3s;
+            backface-visibility: hidden;
+          }
+
+          &:hover::after {
+            transform: scaleX(100%);
+          }
+        }
+      }
+    }
+  }
+
+  .checkbox-primary {
+    position: fixed;
+    bottom: 6.5%;
+    right: 5%;
+    height: fit-content;
+    z-index: 99991;
+  }
+}
+
+@include respond(phone) {
+  .navbar {
+    padding-bottom: 0;
+    .menu-icon {
+      position: fixed;
+      top: 5%;
+      left: 5%;
+      font-size: 5rem;
+      z-index: 99992;
+      color: var(--color-secondary);
+      transition: all 0.3s;
+      display: block;
+    }
+    .menu {
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    .active-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .checkbox-primary {
+      top: 3.5%;
+    }
+  }
+}

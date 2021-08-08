@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Work+Sans&display=swap");
+
+// fonts
+$font-primary: "Work Sans", sans-serif;
+$font-secondary: "Lora", serif;
+
+// colors
+
+$white: #fff;
+$sky: #eafbff;
+$black: #171717;
+$grey: #444444;
+$blue: #001d23;
+$blue2: #004756;
+$purple: #23001d;
+$green: #1d2300;
+$brown: #230600;
+$red: #ff616d;
+$red2: #f38ba0;
+
+:root {
+  --color: #{$black};
+  --background: #{$sky};
+  --color-primary: #{$blue2};
+  --color-secondary: #{$red};
+  --white-blue: #{$white};
+  --blue-white: #{$blue};
+  --white-black: #{$white};
+}
+
+.dark {
+  --color: #{$white};
+  --background: #{$black};
+  --color-primary: #{$blue};
+  --color-secondary: #{$red};
+  --white-blue: #{$blue};
+  --blue-white: #{$white};
+  --white-black: #{$black};
+}

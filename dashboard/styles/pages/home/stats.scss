@@ -1,0 +1,76 @@
+.stats {
+  min-height: 50rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .details {
+    height: 20rem;
+    width: 30rem;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    background-color: var(--white-black);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s;
+
+    .counter {
+      height: 12rem;
+      width: 12rem;
+      background-color: var(--color-primary);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      color: $white;
+      border-radius: 10px;
+      position: absolute;
+      @include absCenter;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      i {
+        margin-bottom: 1rem;
+        font-size: 4rem;
+      }
+      span {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      @include absCenter;
+      width: 100%;
+      top: 55%;
+      font-size: 1.5rem;
+
+      quotes: "\201c""\201d";
+      &::before {
+        content: open-quote;
+        color: var(--color-secondary);
+        font-size: 2rem;
+        margin-right: 0.2rem;
+      }
+      &::after {
+        content: close-quote;
+        color: var(--color-secondary);
+        font-size: 2rem;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .stats {
+    flex-direction: column;
+    min-height: 120rem;
+  }
+}
+
+@include respond(phone) {
+  .stats {
+    flex-direction: column;
+    min-height: 120rem;
+  }
+}

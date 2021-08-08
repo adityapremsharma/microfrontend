@@ -1,0 +1,41 @@
+.checkbox-primary {
+  input[type="checkbox"] {
+    visibility: hidden;
+    &:checked + label {
+      transform: rotate(360deg);
+      background-color: $black;
+      &:before {
+        transform: translateX(20px);
+        background-color: $white;
+      }
+    }
+  }
+
+  label {
+    display: flex;
+    width: 50px;
+    height: 30px;
+    border: 6px solid var(--color-secondary);
+    background-color: $white;
+    border-radius: 99em;
+    position: relative;
+    transition: transform 0.75s ease-in-out;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+    z-index: 9999;
+
+    &:before {
+      transition: transform 0.75s ease;
+      transition-delay: 0.5s;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-color: $black;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

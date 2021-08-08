@@ -1,0 +1,26 @@
+// abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// base
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+
+// components
+@import "./components/button.scss";
+@import "./components/switch.scss";
+
+// layout
+@import "./layout/navbar.scss";
+@import "./layout/scrollbar.scss";
+@import "./layout/loader.scss";
+
+// pages
+
+// Home
+@import "./pages/home/banner.scss";
+@import "./pages/home/intro.scss";
+@import "./pages/home/stats.scss";
+@import "./pages/home/testimonials.scss";
+@import "./pages/home/footer.scss";
