@@ -20,6 +20,13 @@ const devConfig = {
   plugins: [
     // Only update what has changed on hot reload
     new webpack.HotModuleReplacementPlugin(),
+
+    // name property is not required here but according to convention, it is a good practice to name all our apps.
+    // remotes property will be resopnsible to communicate with the apps and get the exposed file which can be imported in this app.
+    // We are getting remoteEntry.js file which will have app the exposes file.
+    // remotes object keys should be unique. It will be used in apps import.
+    // shared property helps to share modules between all apps so browser loads only one js file for each module.
+    // Make sure to use same version for every module.
     new ModuleFederationPlugin({
       name: "host",
       remotes: {
