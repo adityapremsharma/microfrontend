@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all --parallel dev:*",
-    "dev:host": "npm run --prefix host start",
-    "dev:home": "npm run --prefix home start",
-    "dev:dashboard": "npm run --prefix dashboard start",
-    "dev:profile": "npm run --prefix profile start"
+    "start": "npm-run-all --parallel start:*",
+    "start:host": "npm run --prefix host start",
+    "start:home": "npm run --prefix home start",
+    "start:dashboard": "npm run --prefix dashboard start",
+    "start:profile": "npm run --prefix profile start"
   },
   "repository": {
     "type": "git",
