@@ -12,13 +12,14 @@ const Header = (props) => {
       element.classList.toggle("active-menu");
     };
 
-    document.querySelector(".menu-icon").addEventListener("click", toggleMenu);
-    document.querySelector(".active").addEventListener("click", toggleMenu);
+    document.querySelector(".menu-icon") && document.querySelector(".menu-icon").addEventListener("click", toggleMenu);
+    document.querySelector(".active") && document.querySelector(".active").addEventListener("click", toggleMenu);
     [...document.querySelectorAll(".not-active")].map((element) => element.addEventListener("click", toggleMenu));
 
     return () => {
-      document.querySelector(".menu-icon").removeEventListener("click", toggleMenu);
-      document.querySelector(".active").removeEventListener("click", toggleMenu);
+      document.querySelector(".menu-icon") &&
+        document.querySelector(".menu-icon").removeEventListener("click", toggleMenu);
+      document.querySelector(".active") && document.querySelector(".active").removeEventListener("click", toggleMenu);
       [...document.querySelectorAll(".not-active")].map((element) => element.removeEventListener("click", toggleMenu));
     };
   }, []);
