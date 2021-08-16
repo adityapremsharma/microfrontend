@@ -1,0 +1,16 @@
+{
+  "short_name": "Host",
+  "name": "Host",
+  "icons": [
+    {
+      "src": "/netflix-logo.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#111",
+  "background_color": "#111"
+}

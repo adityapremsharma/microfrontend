@@ -1,0 +1,165 @@
+.intro {
+  background-color: var(--white-black);
+  transition: all 0.3s;
+  .one {
+    display: flex;
+    height: 40rem;
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-family: $font-secondary;
+        margin-bottom: 1rem;
+      }
+      hr {
+        width: 5rem;
+        height: 3px;
+        margin-bottom: 2rem;
+        border: none;
+        background-color: var(--color-secondary);
+        transition: all 0.3s;
+      }
+      p {
+        margin: 0 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .right {
+      flex: 1;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($blue, 0.2);
+        z-index: 999;
+      }
+    }
+  }
+
+  .two {
+    display: flex;
+    height: 40rem;
+
+    .left {
+      flex: 1;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($blue, 0.2);
+        z-index: 999;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-family: $font-secondary;
+        margin-bottom: 1rem;
+      }
+      hr {
+        width: 5rem;
+        height: 3px;
+        margin-bottom: 2rem;
+        border: none;
+        background-color: var(--color-secondary);
+        transition: all 0.3s;
+      }
+      p {
+        margin: 0 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .three {
+    display: flex;
+    height: 40rem;
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-family: $font-secondary;
+        margin-bottom: 1rem;
+      }
+      hr {
+        width: 5rem;
+        height: 3px;
+        margin-bottom: 2rem;
+        border: none;
+        background-color: var(--color-secondary);
+        transition: all 0.3s;
+      }
+      p {
+        margin: 0 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .right {
+      flex: 1;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($blue, 0.2);
+        z-index: 999;
+      }
+    }
+  }
+}
+
+// @include respond(tab-port) {
+//   .intro {
+//     .one,
+//     .two,
+//     .three {
+//       flex-direction: column;
+//       height: 60rem;
+//     }
+//   }
+// }
+
+@include respond(phone) {
+  .intro {
+    .one,
+    .two,
+    .three {
+      flex-direction: column;
+      height: 60rem;
+    }
+  }
+}

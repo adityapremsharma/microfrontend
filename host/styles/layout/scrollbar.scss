@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 7.5px;
+
+  /* Track */
+  &-track {
+    background-color: var(--text);
+  }
+
+  /* Handle */
+  &-thumb {
+    background-color: var(--color-secondary);
+    transition: all 0.3s;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: rgba($red, 0.5);
+    }
+  }
+}
+
+.scrollbar-hide {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
